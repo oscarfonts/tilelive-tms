@@ -1,0 +1,10 @@
+{
+  "name": "tilelive-tms",
+  "version": "0.0.1",
+  "main": "./lib/tilelive-tms.js",
+  "private": true,
+  "dependencies": {
+    "request": "^2.55.0",
+    "tilelive": "^5.7.0"
+  }
+}
