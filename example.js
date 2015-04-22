@@ -8,7 +8,7 @@ require("./").registerProtocols(tilelive);      // Register tms protocol
 require("mbtiles").registerProtocols(tilelive); // Register mbtiles protocol
 
 var progress = function(stats, progress) {
-    process.stdout.write("\r" + (progress.percentage).toFixed(1) + " % - ETA " + progress.eta % 60 + " s          ");
+    process.stdout.write("\r" + (progress.percentage).toFixed(1) + " % - ETA " + Math.round(progress.eta) + " s          ");
     if (progress.percentage == 100) process.stdout.write("\r\nDone!\r\n");
 };
 
