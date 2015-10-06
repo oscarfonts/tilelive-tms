@@ -1,6 +1,6 @@
 /*
   This example dumps a TMS layer into a mbtiles file
-  Requires "tilelive" and "mbtiles" packages
+  Requires "request", tilelive" and "mbtiles" packages
 */
 
 var tilelive = require("tilelive");
@@ -18,12 +18,12 @@ var error = function(error) {
 
 
 // A tms url starts with "tms:", followed by an URL template, which must contain {z} {x} and {y} placeholders
-var src = "tms:http://localhost:8080/geoserver/gwc/service/tms/1.0.0/osm@EPSG%3A900913@png8/{z}/{x}/{y}.png";
-var dst = "mbtiles://./osm.mbtiles";
+var src = "tms:http://demo.opengeo.org/geoserver/gwc/service/tms/1.0.0/ne%3ANE1_HR_LC_SR_W_DR@EPSG%3A900913@jpeg/{z}/{x}/{y}.jpg";
+var dst = "mbtiles://./naturalearth.mbtiles";
 var options = {
     minzoom: 0,
-    maxzoom: 16,
-    bounds: [1.8959314626397201, 41.24712051859019, 2.3140591893595457, 41.53442029978945],
+    maxzoom: 4,
+    bounds: [-180,-90,180,90],
     progress: progress
 };
 

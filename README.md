@@ -8,12 +8,18 @@ This module is intended to be used with [tilelive.js](https://github.com/mapbox/
 
 Install tilelive and needed drivers:
 
-    npm install tilelive mbtiles tilelive-tms
+    npm install request tilelive mbtiles tilelive-tms
 
-For example, to dump a GeoServer cached layer (accessible as a TMS service) into a mbtiles file, use the "tilelive-copy" utility with the following syntax:
+> Tested with request@2.64.0, tilelive@5.9.0, mbtiles@0.8.0 and tilelive-tms@0.1.0
+
+To dump a GeoServer cached layer (accessible as a TMS service) into a mbtiles file, use the "tilelive-copy" utility with the following syntax:
 
     tilelive-copy <src> <dst> --bounds=xmin,ymin,xmax,ymax --minzoom=zmin --maxzoom=zmax
 
-For instance, for an "osm" layer in png8 format, generate up to zoom 16 covering the Barcelona area:
+Example using public GeoServer instance ("natural earth" layer from demo.opengeo.org):
+
+    node_modules/tilelive/bin/tilelive-copy tms:http://demo.opengeo.org/geoserver/gwc/service/tms/1.0.0/ne%3ANE1_HR_LC_SR_W_DR@EPSG%3A900913@jpeg/{z}/{x}/{y}.jpg mbtiles://./naturalearth.mbtiles --bounds=-180,-90,180,90 --minzoom=0 --maxzoom=4
+
+Example using local GeoServer instance ("osm" layer covering the Barcelona area):
 
     node_modules/tilelive/bin/tilelive-copy tms:http://localhost:8080/geoserver/gwc/service/tms/1.0.0/osm@EPSG%3A900913@png8/{z}/{x}/{y}.png mbtiles://./osm.mbtiles --bounds=1.8959314626397201,41.24712051859019,2.3140591893595457,41.53442029978945 --minzoom=0 --maxzoom=16
