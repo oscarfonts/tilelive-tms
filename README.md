@@ -6,11 +6,9 @@ This module is intended to be used with [tilelive.js](https://github.com/mapbox/
 
 ### Usage example
 
-Install tilelive and needed drivers:
+Install tilelive-tms and other needed tilelive protocols (mbtiles for the examples):
 
-    npm install request tilelive mbtiles tilelive-tms
-
-> Tested with request@2.64.0, tilelive@5.9.0, mbtiles@0.8.0 and tilelive-tms@0.1.0
+    npm install tilelive-tms mbtiles
 
 To dump a GeoServer cached layer (accessible as a TMS service) into a mbtiles file, use the "tilelive-copy" utility with the following syntax:
 
