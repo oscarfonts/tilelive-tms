@@ -2,10 +2,11 @@
   This example dumps a TMS layer into a mbtiles file
   Requires "request", tilelive" and "mbtiles" packages
 */
+var path = require('path');
 
 var tilelive = require("tilelive");
-require("./").registerProtocols(tilelive);      // Register tms protocol
-require("mbtiles").registerProtocols(tilelive); // Register mbtiles protocol
+require(path.resolve("./")).registerProtocols(tilelive); // Register tms protocol
+require("mbtiles").registerProtocols(tilelive);          // Register mbtiles protocol
 
 var progress = function(stats, progress) {
     process.stdout.write("\r" + (progress.percentage).toFixed(1) + " % - ETA " + Math.round(progress.eta) + " s          ");
