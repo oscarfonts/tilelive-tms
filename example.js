@@ -4,9 +4,9 @@
 */
 var path = require('path');
 
-var tilelive = require("tilelive");
+var tilelive = require("@mapbox/tilelive");
 require(path.resolve("./")).registerProtocols(tilelive); // Register tms protocol
-require("mbtiles").registerProtocols(tilelive);          // Register mbtiles protocol
+require("@mapbox/mbtiles").registerProtocols(tilelive);  // Register mbtiles protocol
 
 var progress = function(stats, progress) {
     process.stdout.write("\r" + (progress.percentage).toFixed(1) + " % - ETA " + Math.round(progress.eta) + " s          ");
@@ -19,7 +19,7 @@ var error = function(error) {
 
 
 // A tms url starts with "tms:", followed by an URL template, which must contain {z} {x} and {y} placeholders
-var src = "tms:http://demo.opengeo.org/geoserver/gwc/service/tms/1.0.0/ne%3ANE1_HR_LC_SR_W_DR@EPSG%3A900913@jpeg/{z}/{x}/{y}.jpg";
+var src = "tms:https://demo.geo-solutions.it/geoserver/gwc/service/tms/1.0.0/geosolutions%3ANaturalEarth@EPSG%3A900913@jpeg/{z}/{x}/{y}.jpg";
 var dst = "mbtiles://./naturalearth.mbtiles";
 var options = {
     minzoom: 0,

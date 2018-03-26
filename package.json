@@ -1,15 +1,20 @@
 {
   "name": "tilelive-tms",
-  "version": "0.1.1",
-  "description": "Tilelive backend for TMS (Tile Map Service).",
+  "version": "0.1.2",
+  "description": "Tilelive backend for TMS (Tile Map Service) and XYZ (Google Maps, OSM) services.",
   "url": "https://github.com/oscarfonts/tilelive-tms",
   "author": {
     "name": "Oscar Fonts",
     "url": "http://www.fonts.cat"
   },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/oscarfonts/tilelive-tms.git"
+  },
   "main": "./lib/tilelive-tms.js",
   "dependencies": {
-    "request": "^2.65.0",
-    "tilelive": "^5.9.1"
+    "@mapbox/tilelive": "6.0.0",
+    "request": "2.85.0"
   }
 }
