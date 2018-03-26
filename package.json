@@ -12,10 +12,13 @@
     "type": "git",
     "url": "git://github.com/oscarfonts/tilelive-tms.git"
   },
-  "main": "./lib/tilelive-tms.js",
+  "main": "index.js",
   "dependencies": {
     "@mapbox/tilelive": "6.0.0",
     "request": "2.85.0",
     "retry": "0.10.1"
-  }
+  },
+  "files": [
+    "index.js"
+  ]
 }
