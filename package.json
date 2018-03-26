@@ -1,7 +1,7 @@
 {
   "name": "tilelive-tms",
   "version": "0.1.2",
-  "description": "Tilelive backend for TMS (Tile Map Service) and XYZ (Google Maps, OSM) services.",
+  "description": "Tilelive backend for TMS (Tile Map Service) XYZ (Google Maps, OSM) and WMTS (Web Map Tile Service)",
   "url": "https://github.com/oscarfonts/tilelive-tms",
   "author": {
     "name": "Oscar Fonts",
