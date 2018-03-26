@@ -26,4 +26,4 @@ Example using an XYZ service (OpenStreetMap):
 
 Example using a WMTS service (PNOA):
 
-npx tilelive-copy 'tms:http://www.ign.es/wmts/pnoa-ma?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&Layer=OI.OrthoimageCoverage&Style=default&Format=image/jpeg&TileMatrixSet=GoogleMapsCompatible&TileMatrix={z}&TileCol={x}&TileRow={-y}' mbtiles://./pnoa.mbtiles --bounds=-18.162,21.899,6.289,45.286 --minzoom=0 --maxzoom=6
+    npx tilelive-copy 'tms:http://www.ign.es/wmts/pnoa-ma?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&Layer=OI.OrthoimageCoverage&Style=default&Format=image/jpeg&TileMatrixSet=GoogleMapsCompatible&TileMatrix={z}&TileCol={x}&TileRow={-y}' mbtiles://./pnoa.mbtiles --bounds=-18.162,21.899,6.289,45.286 --minzoom=0 --maxzoom=6
