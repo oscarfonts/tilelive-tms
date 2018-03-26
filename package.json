@@ -15,6 +15,7 @@
   "main": "./lib/tilelive-tms.js",
   "dependencies": {
     "@mapbox/tilelive": "6.0.0",
-    "request": "2.85.0"
+    "request": "2.85.0",
+    "retry": "0.10.1"
   }
 }
